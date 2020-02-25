@@ -1,12 +1,25 @@
 import React from 'react';
 import './App.css';
+import SideNavbar from "../nav/SideNavbar";
+import {Nav} from "react-bootstrap";
+
 
 
 function App() {
-    return (
-        <div className="App">
-        </div>
-);
+  return (
+    <div className="App">
+      <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossOrigin="anonymous"
+      />
+        <link href="../nav/SideNavBar.css" rel="stylesheet" type="text/css"/>
+
+      <SideNavbar />
+
+    </div>
+  );
 }
 
 export default App;
