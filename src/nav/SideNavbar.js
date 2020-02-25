@@ -12,7 +12,7 @@ function SideNavbar() {
     return (
         <div style={{width: "12%"}}>
             <Router>
-                <Navbar className="custom-navbar" bg="dark" variant="dark" >
+                <Navbar className="custom-navbar" bg="dark" variant="dark">
                     <Nav variant="pills" defaultActiveKey="#home" className="nav flex-column">
                     <Navbar.Brand href="#home">Fooooooorumi</Navbar.Brand>
 
