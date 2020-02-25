@@ -5,26 +5,29 @@ class Topic extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: []
+            data: "",
+            posts: []
         }
     }
+
     componentDidMount() {
-            fetch('/api/topics')
-                .then(res => res.json())
-                .then((data) => {
-                    this.setState({data: data})
-                })
-                .catch(console.log)
+        fetch('/api/topic/' + this.props.id)
+            .then(res => res.json())
+            .then((data) => {
+                this.setState({data: data, posts: data.posts})
+            })
+            .catch(console.log)
     }
 
     render() {
-
-        return(
-            <div>
-                <h1>{this.data.name}</h1>
-                {this.state.data.posts.map(item => {
-                    <Post key={item.id} item={item}/>
-                })}
+        return (
+            <div className="div-container">
+                <h1>{this.state.data.name}</h1>
+                <div>
+                    {this.state.posts.map(item => (
+                        <Post key={item.id} item={item}/>
+                    ))}
+                </div>
             </div>
 
         )
@@ -32,4 +35,5 @@ class Topic extends Component {
     }
 
 }
+
 export default Topic

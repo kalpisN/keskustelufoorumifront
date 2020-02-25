@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import SideNavbar from "../nav/SideNavbar";
-import {Nav} from "react-bootstrap";
 
 
 

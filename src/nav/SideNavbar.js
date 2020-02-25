@@ -6,6 +6,7 @@ import {
     BrowserRouter as Router,
     Route, Link, Switch
 } from 'react-router-dom'
+import Topic from "../chat/Topic";
 
 function SideNavbar() {
     return (
@@ -29,7 +30,7 @@ function SideNavbar() {
                 </Navbar>
                 <Switch>
                     <Route path="/b">
-
+                        <Topic id="1"/>
                     </Route>
                     <Route path="/">
 
