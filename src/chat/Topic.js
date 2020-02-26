@@ -15,6 +15,7 @@ class Topic extends Component {
         fetch('/api/topic/' + this.props.id)
             .then(res => res.json())
             .then((data) => {
+                console.log(data)
                 this.setState({data: data, posts: data.posts})
             })
             .catch(console.log)
