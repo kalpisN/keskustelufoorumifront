@@ -3,17 +3,15 @@ import {Navbar, Nav} from "react-bootstrap";
 import  "./SideNavBar.css"
 
 import {
-    BrowserRouter as Router,
-    Route, Link, Switch
+Link
 } from 'react-router-dom'
 import Topic from "../chat/Topic";
 
 
 function SideNavbar() {
     return (
-        <div style={{width: "12%"}}>
-            <Router>
-                <Navbar className="custom-navbar" bg="dark" variant="dark" >
+        <div className="custom-sidebar col-md-3">
+                <Navbar className="custom-navbar" bg="dark" variant="dark">
                     <Nav variant="pills" defaultActiveKey="#home" className="nav flex-column">
                     <Navbar.Brand href="#home">Fooooooorumi</Navbar.Brand>
 
@@ -40,6 +38,7 @@ function SideNavbar() {
                     </Route>
                 </Switch>
             </Router>
+
         </div>
     )
 }

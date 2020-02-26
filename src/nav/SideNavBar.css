@@ -1,15 +1,19 @@
 .custom-navbar {
     text-align: center;
-
+    height: 100%;
 }
 
-
+.custom-sidebar {
+    min-height: 100%;
+    top: 0;
+}
 .nav-link {
     color: white;
     line-height: 1pt;
     text-align: left;
 
 }
+
 
 
 
