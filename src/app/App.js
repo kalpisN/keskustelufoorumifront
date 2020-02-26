@@ -3,6 +3,7 @@ import './App.css';
 import SideNavbar from "../nav/SideNavbar";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Topic from "../chat/Topic";
+import NewPost from "../chat/NewPost";
 
 function App() {
   return (

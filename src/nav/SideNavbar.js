@@ -27,17 +27,6 @@ function SideNavbar() {
                     </Nav>
 
                 </Navbar>
-                <Switch>
-                    <Route path="/b">
-                        <Topic id="1"/>
-                    </Route>
-                    <Route path="/">
-                    </Route>
-                    <Route path="/c">
-
-                    </Route>
-                </Switch>
-            </Router>
 
         </div>
     )

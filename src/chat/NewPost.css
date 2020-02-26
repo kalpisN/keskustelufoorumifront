@@ -1,0 +1,22 @@
+.form-control {
+    width: 40%;
+    height: 30%;
+    align-items: end;
+}
+
+.form-box {
+    text-align: start;
+}
+.submit-button {
+    background: #B9DFFF;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;
+    margin: 5px;
+
+
+
+
+}

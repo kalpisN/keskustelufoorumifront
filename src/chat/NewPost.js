@@ -1,6 +1,7 @@
 import React from 'react'
 import {useFormik} from 'formik';
 import {API_BASE_URL} from "../constants";
+import "./NewPost.css";
 
 export default function NewPost() {
 
@@ -54,7 +55,8 @@ export default function NewPost() {
 
 
     return (
-        <div><label>Title</label>
+        <div className="form-box"><label>New Post</label>
+
             <input
                 id="title"
                 name="title"
@@ -73,7 +75,7 @@ export default function NewPost() {
                 value={formik.values.text}
                 placeholder="Enter post text..."
                 className="form-control"
-                style={{width: "500px", height: "300px"}}
+                style={{width: "40%", height: "150px"}}
             />
             <label>Password</label>
             <input
@@ -82,11 +84,12 @@ export default function NewPost() {
                 type="password"
                 onChange={formik.handleChange}
                 value={formik.values.password}
+                placeholder="Enter password..."
                 className="form-control"
             />
             <label>Upload image</label>
             <input type="file" className="form-control" name="file" onChange={onFileChangeHandler}/>
-            <input type="submit" value="Submit"/>
+            <input className="submit-button" type="submit" value="Submit"/>
         </div>
     )
 
