@@ -7,6 +7,7 @@ Link
 } from 'react-router-dom'
 import Topic from "../chat/Topic";
 
+
 function SideNavbar() {
     return (
         <div className="custom-sidebar col-md-3">
@@ -26,6 +27,18 @@ function SideNavbar() {
                     </Nav>
 
                 </Navbar>
+                <Switch>
+                    <Route path="/b">
+                        <Topic id="1"/>
+                    </Route>
+                    <Route path="/">
+                    </Route>
+                    <Route path="/c">
+
+                    </Route>
+                </Switch>
+            </Router>
+
         </div>
     )
 }
