@@ -8,6 +8,7 @@ Link
 import Topic from "../chat/Topic";
 
 
+
 function SideNavbar() {
     return (
         <div className="custom-sidebar col-md-3">
@@ -25,9 +26,7 @@ function SideNavbar() {
                             <Link className="nav-link" to="/c">Aihe</Link>
                         </Nav.Link>
                     </Nav>
-
                 </Navbar>
-
         </div>
     )
 }
