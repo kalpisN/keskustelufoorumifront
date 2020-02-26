@@ -1,17 +1,30 @@
-.custom-navbar {
-    text-align: center;
-    height: 100%;
-}
-
 .custom-sidebar {
     min-height: 100%;
+    min-width: 200px;
+    max-width: 15%;
     top: 0;
 }
+
+.custom-navbar {
+    min-height: 100%;
+    min-width: 200px;
+    max-width: 15%;
+   padding: 10px;
+    align-items: start;
+}
+
 .nav-link {
     color: white;
-    line-height: 1pt;
     text-align: left;
+    width: 180px;
+    padding: 1px;
+}
 
+.navbar-brand {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin: 0;
 }
 
 

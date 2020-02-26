@@ -12,7 +12,7 @@ function SideNavbar() {
         <div className="custom-sidebar col-md-3">
                 <Navbar className="custom-navbar" bg="dark" variant="dark">
                     <Nav variant="pills" defaultActiveKey="#home" className="nav flex-column">
-                    <Navbar.Brand href="#home">Fooooooorumi</Navbar.Brand>
+                    <Navbar.Brand href="#home">Joku lauta</Navbar.Brand>
 
                         <Nav.Link href="#" as="span">
                             <Link className="nav-link" to="/">Home</Link>
