@@ -1,0 +1,40 @@
+
+.post-content {
+    text-align: left !important;
+    padding: 5px;
+
+}
+.header-content {
+    text-align: left;
+    width: 100%;
+    background-color: rosybrown;
+    font-size: small;
+}
+.thumbnail {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    width: 200px;
+    height: auto;
+    float:left;
+    margin-right:10px;
+
+}
+.img-reply {
+    width: 100%;
+    background-color: palegoldenrod;
+
+}
+.reply {
+    padding-left: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    padding-right: 5px;
+    float: left;
+    width: 100%;
+    height: auto;
+    word-wrap: break-word;
+    font-size: small;
+    background-color: lightgrey !important;
+
+}

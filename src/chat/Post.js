@@ -1,20 +1,33 @@
 import React from "react";
 import Reply from "../chat/Reply";
+import "./Post.css"
 
 function Post(props) {
 
-console.log(props)
+    console.log(props)
     const replies = props.item.replies
-    return(
-        <div>
-            <h3>{props.item.title}</h3>
-            <p>{props.item.created}</p>
-            <img src={props.item.url}/>
-            <p>{props.item.text}</p>
+    return (
+        <div className="post-container">
+            <div className="post">
+                <div className="flex_content">
+                    <div className="img">
+                        <img className="thumbnail" src={props.item.imgUrl}/>
+                        <div className="header-content">
+                            <a href={props.item.imgUrl}>{props.item.imgUrl} </a>
+                            <a>Anonymous, Title: </a>
+                            <b>{props.item.title} {props.item.created}</b>
+                        </div>
+                        <br/>
+                        <p className="post-content">{props.item.text} ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                    </div>
+                </div>
+            </div>
+            <p></p>
             {replies.map(item => (
                 <Reply key={item.id} item={item}/>
             ))}
         </div>
+
     )
 
 }
