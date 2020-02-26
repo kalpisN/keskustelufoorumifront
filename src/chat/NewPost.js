@@ -1,5 +1,6 @@
 import React from 'react'
 import {useFormik} from 'formik';
+import {API_BASE_URL} from "../constants";
 
 export default function NewPost() {
 
@@ -14,7 +15,7 @@ export default function NewPost() {
         onSubmit: values => {
             const formData = new FormData();
             formData.append('file', this.state.selectedFile);
-            fetch('/upload', {
+            fetch(API_BASE_URL +'upload', {
                 method: 'post',
                 body: formData
             }).then(res => {
@@ -29,7 +30,7 @@ export default function NewPost() {
 
             // alert(JSON.stringify(values, null, 2))
             formik.resetForm();
-            fetch("/api/post/", {
+            fetch(API_BASE_URL +"api/post/", {
                 method: "POST",
                 headers: {'content-type': 'application/json'},
                 body: JSON.stringify(values),

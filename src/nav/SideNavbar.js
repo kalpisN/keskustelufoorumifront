@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom'
 import Topic from "../chat/Topic";
 
+
 function SideNavbar() {
     return (
         <div style={{width: "12%"}}>
@@ -33,7 +34,6 @@ function SideNavbar() {
                         <Topic id="1"/>
                     </Route>
                     <Route path="/">
-
                     </Route>
                     <Route path="/c">
 
