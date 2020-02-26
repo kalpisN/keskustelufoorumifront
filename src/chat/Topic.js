@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Post from "./Post";
+import NewPost from "./NewPost";
 
 class Topic extends Component {
     constructor(props) {
@@ -23,6 +24,7 @@ class Topic extends Component {
     render() {
         return (
             <div className="div-container">
+                <NewPost/>
                 <h1>{this.state.data.name}</h1>
                 <div>
                     {this.state.posts.map(item => (
