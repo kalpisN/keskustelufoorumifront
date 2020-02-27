@@ -3,8 +3,6 @@ import Reply from "../chat/Reply";
 import "./Post.css"
 
 function Post(props) {
-
-    console.log(props)
     const replies = props.item.replies
     return (
         <div className="post-container">
@@ -18,7 +16,7 @@ function Post(props) {
                             <b>{props.item.title} {props.item.created}</b>
                         </div>
                         <br/>
-                        <p className="post-content">{props.item.text} ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                        <p className="post-content">{props.item.text}</p>
                     </div>
                 </div>
             </div>
