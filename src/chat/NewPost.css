@@ -1,0 +1,64 @@
+
+
+.newpost {
+    font-size: 20px;
+}
+
+
+.form-control {
+    width: 350px;
+    line-height: 20px;
+    margin-top: 10px;
+
+}
+
+.form-box {
+    text-align: start;
+    border-style: hidden;
+    border-radius: 5px;
+    box-shadow: 15px 15px 25px 10px #2e272e;
+    background-color: #343a40;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    color: darkgoldenrod;
+    text-align: left;
+    display: block;
+    margin:auto;
+
+}
+
+.submit-button {
+    box-shadow: 6px 7px 16px -7px #000000;
+    background: #ffffff linear-gradient(to bottom, #ffffff 5%, #2e272e 100%);
+    border-radius:6px;
+    border:1px solid #2e272e;
+    display:inline-block;
+    cursor:pointer;
+    color:#050505;
+    font-size:14px;
+    font-weight:bold;
+    padding:4px 8px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #b5aab5;
+    margin-top: 15px;
+
+}
+.submit-button:hover {
+    background: #2e272e linear-gradient(to bottom, #2e272e 5%, #ffffff 100%);
+}
+.submit-button:active {
+    position:relative;
+    top:1px;
+}
+
+.image-input {
+
+}
+
+
+
+

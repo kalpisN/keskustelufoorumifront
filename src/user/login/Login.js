@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { login } from '../../util/APIUtils';
 import { Link } from 'react-router-dom';
 import { ACCESS_TOKEN } from '../../constants';
+import "./Login.css";
+import Signup from "../signup/Signup";
 
 import { Form, Input, Button, Icon, notification } from 'antd';
 const FormItem = Form.Item;
@@ -11,7 +13,6 @@ class Login extends Component {
         const AntWrappedLoginForm = Form.create()(LoginForm)
         return (
             <div className="login-container">
-                <h1 className="page-title">Login</h1>
                 <div className="login-content">
                     <AntWrappedLoginForm onLogin={this.props.onLogin} />
                 </div>
@@ -56,7 +57,7 @@ class LoginForm extends Component {
         const { getFieldDecorator } = this.props.form;
         return (
             <Form onSubmit={this.handleSubmit} className="login-form">
-                <FormItem>
+                <FormItem className="username-input">
                     {getFieldDecorator('usernameOrEmail', {
                         rules: [{ required: true, message: 'Please input your username or email!' }],
                     })(
@@ -67,7 +68,7 @@ class LoginForm extends Component {
                             placeholder="Username or Email" />
                     )}
                 </FormItem>
-                <FormItem>
+                <FormItem className="password-input">
                     {getFieldDecorator('password', {
                         rules: [{ required: true, message: 'Please input your Password!' }],
                     })(
@@ -79,9 +80,9 @@ class LoginForm extends Component {
                             placeholder="Password"  />
                     )}
                 </FormItem>
-                <FormItem style={{color: "white"}}>
+                <FormItem style={{color: "white"}} className="login">
                     <Button type="primary" htmlType="submit" size="large" className="login-form-button">Login</Button>
-                    Dont have an account? <Link to="/signup">Register now!</Link>
+                    <br/>Don't have an account? <Link to="/signup">Register now!</Link>
                 </FormItem>
             </Form>
         );

@@ -2,11 +2,11 @@ import React from "react";
 import {Navbar, Nav} from "react-bootstrap";
 import  "./SideNavBar.css"
 
+
 import {
 Link
 } from 'react-router-dom'
-import Topic from "../chat/Topic";
-
+import Login from "../user/login/Login";
 
 
 function SideNavbar() {
@@ -14,11 +14,16 @@ function SideNavbar() {
         <div className="custom-sidebar col-md-3">
                 <Navbar className="custom-navbar" bg="dark" variant="dark">
                     <Nav variant="pills" defaultActiveKey="#home" className="nav flex-column">
-                    <Navbar.Brand href="#home">Joku lauta</Navbar.Brand>
 
-                        <Nav.Link href="#" as="span">
+                    <Navbar.Brand href="#home">Joku lauta</Navbar.Brand>
+                        <Nav.Link className="home" href="#" as="span">
                             <Link className="nav-link" to="/">Home</Link>
                         </Nav.Link>
+
+                        <Login className="login-form"></Login>
+
+
+
                         <Nav.Link href="#" as="span" eventKey="b">
                             <Link className="nav-link" to="/b">Random</Link>
                         </Nav.Link>

@@ -1,0 +1,57 @@
+.signup-container {
+    min-height: 100vh;
+}
+
+.signup-content {
+   align-content: center;
+}
+
+
+.signup-form {
+    position: center;
+    border-style: hidden;
+    border-radius:6px;
+    box-shadow: 15px 15px 25px 10px #2e272e;
+    background-color: #343a40;
+    width: fit-content;
+    height: fit-content;
+    padding: 50px;
+    color: darkgoldenrod;
+    text-align: left;
+    display: block;
+    margin:auto;
+}
+
+.page-title {
+    margin-bottom: 30px;
+    font-size: 80pt;
+    text-shadow: 1px 4px 6px rgba(0,0,0,0.7);
+    letter-spacing: 15px;
+    font-family: Georgia, serif;
+}
+
+.full-name {
+    width: 300px;
+    margin-bottom: 14px;
+}
+
+.user-name-input {
+    width: 300px;
+    margin-bottom: 14px;
+
+}
+
+.password-info {
+    width: 300px;
+    margin-bottom: 25px;
+
+}
+
+.email-input {
+    width: 300px;
+    margin-bottom: 14px;
+}
+
+.signup-form-button {
+
+}
