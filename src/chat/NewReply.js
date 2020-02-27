@@ -1,14 +1,11 @@
 import React, {useState} from 'react'
 import {useFormik} from 'formik';
 import {API_BASE_URL} from "../constants";
-import "./NewPost.css";
 
-export default function NewPost(props) {
-    console.log(props)
+export default function NewReply(props) {
     const [image, setImage] = useState()
     const formik = useFormik({
         initialValues: {
-            title: "",
             text: "",
             password: "",
             imgUrl: "",
@@ -22,11 +19,11 @@ export default function NewPost(props) {
             })
                 .then(res => res.json())
                 .then(res => {
-                     return res.url
+                    return res.url
                 })
 
             formik.resetForm()
-            fetch(API_BASE_URL + "api/topic/" + props.id.id, {
+            fetch(API_BASE_URL + "api/topic/reply/" + props.post_id, {
                 method: "POST",
                 headers: {'content-type': 'application/json'},
                 body: JSON.stringify(values),
@@ -35,7 +32,7 @@ export default function NewPost(props) {
                         console.log(values)
                     }
                 )
-            document.location.reload()
+        document.location.reload()
         }
     });
 
@@ -43,24 +40,14 @@ export default function NewPost(props) {
     return (
         <div>
             <form onSubmit={formik.handleSubmit} style={{width: '50%', display: 'inline-block'}}>
-                <label>Title</label>
-                <input
-                    id="title"
-                    name="title"
-                    type="text"
-                    onChange={formik.handleChange}
-                    value={formik.values.title}
-                    placeholder="Enter title..."
-                    className="form-control"
-                />
-                <label>Text</label>
+                <label>Reply</label>
                 <input
                     id="text"
                     name="text"
                     type="text"
                     onChange={formik.handleChange}
                     value={formik.values.text}
-                    placeholder="Enter post text..."
+                    placeholder="Enter reply text..."
                     className="form-control"
                     style={{width: "500px", height: "300px"}}
                 />
