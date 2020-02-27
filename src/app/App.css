@@ -6,6 +6,7 @@
 }
 .App .col-md-3 {
   padding: 0;
+
 }
 
 .App .col-md-9 {
@@ -24,6 +25,50 @@ body, #root {
   background-color: #797A7C;
   background-image: linear-gradient(315deg, #797A7C 0%, #797A7C 74%);
 }
+
+.App .home-page {
+  height: 100vh;
+}
+
+.App .topic-table {
+    width: 600px;
+    font-size: 20px;
+    border-style: groove;
+    border-top-style: hidden;
+    table-layout: auto;
+    text-align-all: center;
+    line-height: 35px;
+    display: block;
+    margin:auto;
+    padding: 40px;
+}
+
+.App .page-name {
+  margin-bottom: 30px;
+  font-size: 60pt;
+  letter-spacing: 2px;
+  text-shadow: 1px 4px 6px rgba(0,0,0,0.7);
+  font-family: Georgia, serif;
+}
+.App .table-header {
+
+  height: fit-content;
+  font-size: 40px;
+  letter-spacing: 8px;
+  border-style: hidden;
+  border-bottom-style: outset;
+  border-color: #343a40;
+  width: 600px;
+  box-shadow: 15px 15px 25px 10px #2e272e;
+  font-family: Georgia, serif;
+  line-height: 60px;
+  background-color: #53535c;
+  margin-bottom: 0;
+  display: block;
+  margin:auto;
+
+}
+
 
 
 
