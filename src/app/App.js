@@ -3,6 +3,8 @@ import './App.css';
 import SideNavbar from "../nav/SideNavbar";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Topic from "../chat/Topic";
+import Signup from "../user/signup/Signup";
+
 
 function App() {
   return (
@@ -17,8 +19,8 @@ function App() {
                                 <Topic id="1"/>
                             </Route>
 
-                            <Route path="/c">
-
+                            <Route path="/signup">
+                                <Signup/>
                             </Route>
                         </Switch>
             </div>

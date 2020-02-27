@@ -1,0 +1,46 @@
+
+.newpost {
+    font-size: 20px;
+}
+
+
+.form-control {
+    width: 40%;
+    height: 30%;
+    min-width: 100px;
+    line-height: 20px;
+    margin-top: 6px;
+}
+
+.form-box {
+    text-align: start;
+    align-items: center;
+}
+
+.submit-button {
+    box-shadow: 6px 7px 16px -7px #000000;
+    background: #ffffff linear-gradient(to bottom, #ffffff 5%, #2e272e 100%);
+    border-radius:6px;
+    border:1px solid #bd8cbd;
+    display:inline-block;
+    cursor:pointer;
+    color:#050505;
+    font-family: Times New Roman, serif;
+    font-size:14px;
+    font-weight:bold;
+    padding:4px 8px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #b5aab5;
+    margin-top: 10px;
+}
+.submit-button:hover {
+    background: #2e272e linear-gradient(to bottom, #2e272e 5%, #ffffff 100%);
+}
+.submit-button:active {
+    position:relative;
+    top:1px;
+}
+
+
+
+
