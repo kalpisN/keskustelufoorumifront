@@ -10,6 +10,7 @@
 .signup-form {
     position: center;
     border-style: hidden;
+
     border-radius:6px;
     box-shadow: 15px 15px 25px 10px #2e272e;
     background-color: #343a40;
@@ -44,14 +45,9 @@
 .password-info {
     width: 300px;
     margin-bottom: 25px;
-
 }
 
 .email-input {
     width: 300px;
     margin-bottom: 14px;
-}
-
-.signup-form-button {
-
 }

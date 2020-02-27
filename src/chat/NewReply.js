@@ -1,15 +1,11 @@
 import React, {useState} from 'react'
 import {useFormik} from 'formik';
-import "./NewPost.css";
 import {API_BASE_URL} from "../constants";
-import "./NewPost.css";
 
-export default function NewPost(props) {
-    console.log(props)
+export default function NewReply(props) {
     const [image, setImage] = useState()
     const formik = useFormik({
         initialValues: {
-            title: "",
             text: "",
             password: "",
             imgUrl: "",
@@ -27,7 +23,7 @@ export default function NewPost(props) {
                 })
 
             formik.resetForm()
-            fetch(API_BASE_URL + "api/topic/" + props.id.id, {
+            fetch(API_BASE_URL + "api/topic/reply/" + props.post_id, {
                 method: "POST",
                 headers: {'content-type': 'application/json'},
                 body: JSON.stringify(values),
@@ -36,48 +32,41 @@ export default function NewPost(props) {
                         console.log(values)
                     }
                 )
-            document.location.reload()
-
+        document.location.reload()
         }
     });
+
+
     return (
         <div>
-            <form className="form-box" onSubmit={formik.handleSubmit}>
-                <label className="newpost">New Post</label>
+            <form onSubmit={formik.handleSubmit} style={{width: '50%', display: 'inline-block'}}>
+                <label>Reply</label>
                 <input
-                    id="title"
-                    name="title"
-                    type="text"
-                    onChange={formik.handleChange}
-                    value={formik.values.title}
-                    placeholder="Enter title..."
-                    className="form-control"
-                />
-                <textarea
                     id="text"
                     name="text"
                     type="text"
                     onChange={formik.handleChange}
                     value={formik.values.text}
-                    placeholder="Enter post text..."
+                    placeholder="Enter reply text..."
                     className="form-control"
-                    style={{height: "180px"}}
+                    style={{width: "500px", height: "300px"}}
                 />
+                <label>Password</label>
                 <input
                     id="password"
                     name="password"
                     type="password"
-                    placeholder="Enter password..."
                     onChange={formik.handleChange}
                     value={formik.values.password}
                     className="form-control"
-                /><br/>
-                <label>Upload image</label><br/>
-                <input className="image-input" id="image" name="image" type="file" onChange={(event) => {
+                />
+                <label>Upload image</label>
+                <input id="image" name="image" type="file" onChange={(event) => {
                     setImage(event.target.files[0])
-                }}/><br/>
-                <input className="submit-button" type="submit" value="Submit"/>
+                }}/>
+                <input type="submit" value="Submit"/>
             </form>
         </div>
     )
+
 }

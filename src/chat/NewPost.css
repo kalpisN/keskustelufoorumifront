@@ -9,11 +9,11 @@
     width: 350px;
     line-height: 20px;
     margin-top: 10px;
-
 }
 
 .form-box {
     text-align: start;
+
     border-style: hidden;
     border-radius: 5px;
     box-shadow: 15px 15px 25px 10px #2e272e;
@@ -53,10 +53,6 @@
 .submit-button:active {
     position:relative;
     top:1px;
-}
-
-.image-input {
-
 }
 
 
