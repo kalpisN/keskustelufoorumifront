@@ -29,7 +29,7 @@ class Topic extends Component {
                 <h1>{this.state.data.name}</h1>
                 <div className="big-post-container">
                     {this.state.posts.map(item => (
-                        <Post key={item.id} item={item}/>
+                        <Post key={item.id} item={item} id={this.state.data.id}/>
                     ))}
                 </div>
             </div>
