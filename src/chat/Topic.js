@@ -24,13 +24,15 @@ class Topic extends Component {
     }
 
     render() {
+        let posts = this.state.posts.sort((a, b) => (a.created < b.created) ? 1: -1);
+
         return (
             <div>
                 <h1 className="page-header">{this.state.data.name}</h1>
                 <NewPost id={this.state.data}/>
 
                 <div className="big-post-container">
-                    {this.state.posts.map(item => (
+                    {posts.map(item => (
                         <Post key={item.id} item={item} id={this.state.data.id}/>
                     ))}
                 </div>

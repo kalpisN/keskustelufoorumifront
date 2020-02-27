@@ -2,7 +2,6 @@ import React from "react";
 import "./Reply.css"
 
 function Reply(props) {
-
     return(
         <div className="reply">
                 <div className="flex_content">
