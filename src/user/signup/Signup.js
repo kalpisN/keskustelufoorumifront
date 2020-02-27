@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { signup, checkUsernameAvailability, checkEmailAvailability } from '../../util/APIUtils';
 import { Link } from 'react-router-dom';
+import "./Signup.css";
 import {
     NAME_MIN_LENGTH, NAME_MAX_LENGTH,
     USERNAME_MIN_LENGTH, USERNAME_MAX_LENGTH,
@@ -90,7 +91,7 @@ class Signup extends Component {
                             label="Full Name"
                             validateStatus={this.state.name.validateStatus}
                             help={this.state.name.errorMsg}>
-                            <Input
+                            <Input className="full-name"
                                 size="large"
                                 name="name"
                                 autoComplete="off"
@@ -98,11 +99,12 @@ class Signup extends Component {
                                 value={this.state.name.value}
                                 onChange={(event) => this.handleInputChange(event, this.validateName)} />
                         </FormItem>
-                        <FormItem label="Username"
+                        <FormItem
+                                label="Username"
                                   hasFeedback
                                   validateStatus={this.state.username.validateStatus}
                                   help={this.state.username.errorMsg}>
-                            <Input
+                            <Input className="user-name-input"
                                 size="large"
                                 name="username"
                                 autoComplete="off"
@@ -116,7 +118,7 @@ class Signup extends Component {
                             hasFeedback
                             validateStatus={this.state.email.validateStatus}
                             help={this.state.email.errorMsg}>
-                            <Input
+                            <Input className="email-input"
                                 size="large"
                                 name="email"
                                 type="email"
@@ -130,7 +132,7 @@ class Signup extends Component {
                             label="Password"
                             validateStatus={this.state.password.validateStatus}
                             help={this.state.password.errorMsg}>
-                            <Input
+                            <Input className="password-info"
                                 size="large"
                                 name="password"
                                 type="password"
@@ -145,8 +147,9 @@ class Signup extends Component {
                                     size="large"
                                     className="signup-form-button"
                                     disabled={this.isFormInvalid()}>Sign up</Button>
-                            Already registed? <Link to="/login">Login now!</Link>
+
                         </FormItem>
+                        <br/>Already registed? <Link to="/login">Login now!</Link>
                     </Form>
                 </div>
             </div>

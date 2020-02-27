@@ -25,8 +25,10 @@ class Topic extends Component {
     render() {
         return (
             <div>
-                <NewPost id={this.state.data}/>
-                <h1>{this.state.data.name}</h1>
+
+                <h1 className="page-header">{this.state.data.name}</h1>
+                <NewPost/>
+
                 <div className="big-post-container">
                     {this.state.posts.map(item => (
                         <Post key={item.id} item={item}/>
