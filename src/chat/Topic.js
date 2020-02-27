@@ -28,6 +28,7 @@ class Topic extends Component {
             <div>
                 <h1 className="page-header">{this.state.data.name}</h1>
                 <NewPost id={this.state.data}/>
+
                 <div className="big-post-container">
                     {this.state.posts.map(item => (
                         <Post key={item.id} item={item}/>

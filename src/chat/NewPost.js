@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import {useFormik} from 'formik';
 import "./NewPost.css";
 import {API_BASE_URL} from "../constants";
+
+
+
 export default function NewPost(props) {
     const [image, setImage] = useState()
     const formik = useFormik({
