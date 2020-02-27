@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {useFormik} from 'formik';
 import {API_BASE_URL} from "../constants";
+import "./NewReply.css"
 
 export default function NewReply(props) {
     const [image, setImage] = useState()
@@ -39,9 +40,9 @@ export default function NewReply(props) {
 
     return (
         <div>
-            <form onSubmit={formik.handleSubmit} style={{width: '50%', display: 'inline-block'}}>
-                <label>Reply</label>
-                <input
+            <form  className="form-box" onSubmit={formik.handleSubmit}>
+                <label className="newpost">Reply</label>
+                <textarea
                     id="text"
                     name="text"
                     type="text"
@@ -49,7 +50,7 @@ export default function NewReply(props) {
                     value={formik.values.text}
                     placeholder="Enter reply text..."
                     className="form-control"
-                    style={{width: "500px", height: "300px"}}
+                    style={{height: "180px"}}
                 />
                 <label>Password</label>
                 <input
@@ -61,10 +62,10 @@ export default function NewReply(props) {
                     className="form-control"
                 />
                 <label>Upload image</label>
-                <input id="image" name="image" type="file" onChange={(event) => {
+                <input id="image" name="image" type="file" className="image-input" onChange={(event) => {
                     setImage(event.target.files[0])
                 }}/>
-                <input type="submit" value="Submit"/>
+                <input className="submit-button" type="submit" value="Submit"/>
             </form>
         </div>
     )

@@ -7,7 +7,7 @@ function Reply(props) {
         <div className="reply">
                 <div className="flex_content">
                     <div className="img-reply">
-                        <img className="thumbnail" src={props.item.imgUrl}/>
+                        <a href={props.item.imgUrl}><img className="reply-thumbnail" src={props.item.imgUrl}/></a>
                         <div className="header-content">
                             <a href={props.item.imgUrl}>{props.item.imgUrl} </a>
                             <a>Anonymous</a>

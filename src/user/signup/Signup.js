@@ -149,7 +149,6 @@ class Signup extends Component {
                                     disabled={this.isFormInvalid()}>Sign up</Button>
 
                         </FormItem>
-                        <br/>Already registed? <Link to="/login">Login now!</Link>
                     </Form>
                 </div>
             </div>

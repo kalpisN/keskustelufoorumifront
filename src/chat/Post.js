@@ -11,7 +11,7 @@ function Post(props) {
                 <div className="post">
                     <div className="flex_content">
                         <div className="img">
-                            <img className="thumbnail" src={props.item.imgUrl}/>
+                            <a href={props.item.imgUrl}><img className="thumbnail" src={props.item.imgUrl}/></a>
                             <div className="header-content">
                                 <a href={props.item.imgUrl}>{props.item.imgUrl} </a>
                                 <a>Anonymous, Title: </a>
@@ -32,7 +32,7 @@ function Post(props) {
                 <div className="post">
                     <div className="flex_content">
                         <div className="img">
-                            <img className="thumbnail" src={props.item.imgUrl}/>
+                            <a href={props.item.imgUrl}><img className="thumbnail" src={props.item.imgUrl}/></a>
                             <div className="header-content">
                                 <a href={props.item.imgUrl}>{props.item.imgUrl} </a>
                                 <a>Anonymous, Title: </a>
@@ -54,7 +54,7 @@ function Post(props) {
             <div className="post">
                 <div className="flex_content">
                     <div className="img">
-                        <img className="thumbnail" src={props.item.imgUrl}/>
+                        <a href={props.item.imgUrl}><img className="thumbnail" src={props.item.imgUrl}/></a>
                         <div className="header-content">
                             <a href={props.item.imgUrl}>{props.item.imgUrl} </a>
                             <a>Anonymous, Title: </a>

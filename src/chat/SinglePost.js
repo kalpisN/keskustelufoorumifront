@@ -31,7 +31,7 @@ export default class SinglePost extends Component{
                     <div className="post">
                         <div className="flex_content">
                             <div className="img">
-                                <img className="thumbnail" src={this.state.data.imgUrl}/>
+                                <a href={this.state.data.imgUrl}><img className="thumbnail" src={this.state.data.imgUrl} /></a>
                                 <div className="header-content">
                                     <a href={this.state.data.imgUrl}>{this.state.data.imgUrl} </a>
                                     <a>Anonymous, Title: </a>
@@ -53,7 +53,7 @@ export default class SinglePost extends Component{
                 <div className="post">
                     <div className="flex_content">
                         <div className="img">
-                            <img className="thumbnail" src={this.state.data.imgUrl}/>
+                            <a href={this.state.data.imgUrl}><img className="thumbnail" src={this.state.data.imgUrl} /></a>
                             <div className="header-content">
                                 <a href={this.state.data.imgUrl}>{this.state.data.imgUrl} </a>
                                 <a>Anonymous, Title: </a>
