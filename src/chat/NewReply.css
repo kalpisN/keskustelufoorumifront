@@ -1,0 +1,18 @@
+
+.form-control {
+    width: 350px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+
+.submit-button:hover {
+    background: #2e272e linear-gradient(to bottom, #2e272e 5%, #ffffff 100%);
+}
+.submit-button:active {
+    position:relative;
+    top:1px;
+}
+
+
+
