@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import {useFormik} from 'formik';
-import {API_BASE_URL} from "../constants";
 import "./NewPost.css";
+import {API_BASE_URL} from "../constants";
+
+
 
 export default function NewPost(props) {
     console.log(props)
@@ -22,7 +24,7 @@ export default function NewPost(props) {
             })
                 .then(res => res.json())
                 .then(res => {
-                     return res.url
+                    return res.url
                 })
 
             formik.resetForm()
@@ -35,15 +37,14 @@ export default function NewPost(props) {
                         console.log(values)
                     }
                 )
+
             document.location.reload()
         }
     });
-
-
     return (
         <div>
-            <form onSubmit={formik.handleSubmit} style={{width: '50%', display: 'inline-block'}}>
-                <label>Title</label>
+            <form className="form-box" onSubmit={formik.handleSubmit}>
+                <label className="newpost">New Post</label>
                 <input
                     id="title"
                     name="title"
@@ -53,8 +54,7 @@ export default function NewPost(props) {
                     placeholder="Enter title..."
                     className="form-control"
                 />
-                <label>Text</label>
-                <input
+                <textarea
                     id="text"
                     name="text"
                     type="text"
@@ -62,24 +62,23 @@ export default function NewPost(props) {
                     value={formik.values.text}
                     placeholder="Enter post text..."
                     className="form-control"
-                    style={{width: "500px", height: "300px"}}
+                    style={{height: "180px"}}
                 />
-                <label>Password</label>
                 <input
                     id="password"
                     name="password"
                     type="password"
+                    placeholder="Enter password..."
                     onChange={formik.handleChange}
                     value={formik.values.password}
                     className="form-control"
-                />
-                <label>Upload image</label>
-                <input id="image" name="image" type="file" onChange={(event) => {
+                /><br/>
+                <label>Upload image</label><br/>
+                <input className="image-input" id="image" name="image" type="file" onChange={(event) => {
                     setImage(event.target.files[0])
-                }}/>
-                <input type="submit" value="Submit"/>
+                }}/><br/>
+                <input className="submit-button" type="submit" value="Submit"/>
             </form>
         </div>
     )
-
 }

@@ -6,7 +6,12 @@
 }
 .App .col-md-3 {
   padding: 0;
+}
 
+.App .col-md-9 {
+  padding: 25px;
+  max-width: 80%;
+  float: none;
 }
 .App .col-md-9 {
   padding: 40px;

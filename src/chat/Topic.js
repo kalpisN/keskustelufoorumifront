@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Post from "./Post";
 import NewPost from "./NewPost";
+import "./Topic.css";
 import {API_BASE_URL} from "../constants";
 import Login from "../user/login/Login";
 
@@ -25,9 +26,8 @@ class Topic extends Component {
     render() {
         return (
             <div>
-
                 <h1 className="page-header">{this.state.data.name}</h1>
-                <NewPost/>
+                <NewPost id={this.state.data}/>
 
                 <div className="big-post-container">
                     {this.state.posts.map(item => (
@@ -37,7 +37,6 @@ class Topic extends Component {
             </div>
 
         )
-
     }
 
 }
