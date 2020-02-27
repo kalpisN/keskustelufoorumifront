@@ -4,6 +4,8 @@ import SideNavbar from "../nav/SideNavbar";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Topic from "../chat/Topic";
 import SinglePost from "../chat/SinglePost";
+import Signup from "../user/signup/Signup";
+
 
 function App() {
   return (
@@ -20,8 +22,8 @@ function App() {
                             <Route path="/:topic_id/:post_id" component={SinglePost}>
                             </Route>
 
-                            <Route path="/c">
-
+                            <Route path="/signup">
+                                <Signup/>
                             </Route>
 
                         </Switch>
