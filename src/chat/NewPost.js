@@ -1,37 +1,34 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {useFormik} from 'formik';
 import {API_BASE_URL} from "../constants";
 import "./NewPost.css";
 
-export default function NewPost() {
-
+export default function NewPost(props) {
+    const [image, setImage] = useState()
     const formik = useFormik({
         initialValues: {
             title: "",
             text: "",
             password: "",
             imgUrl: "",
-            created: Date.now()
         },
-        onSubmit: values => {
-            const formData = new FormData();
-            formData.append('file', this.state.selectedFile);
-            fetch(API_BASE_URL +'upload', {
-                method: 'post',
+        onSubmit: async values => {
+            let formData = new FormData()
+            formData.append('image', image)
+            values.imgUrl = await fetch(API_BASE_URL + 'upload', {
+                // headers: {
+                //     'content-type': 'multipart/form-data;boundary=asdasd'
+                // },
+                method: 'POST',
                 body: formData
-            }).then(res => {
-                if (res.ok) {
-                    (res => {
-                        return res.json();
-                    }).then(jsonResponse => {
-                        formik.values.imgUrl = jsonResponse.url
-                    })
-                }
             })
+                .then(res => res.json())
+                .then(res => {
+                     return res.url
+                })
 
-            // alert(JSON.stringify(values, null, 2))
-            formik.resetForm();
-            fetch(API_BASE_URL +"api/post/", {
+            console.log(values)
+            fetch(API_BASE_URL + "api/topic/" + props.id.id, {
                 method: "POST",
                 headers: {'content-type': 'application/json'},
                 body: JSON.stringify(values),
@@ -45,47 +42,45 @@ export default function NewPost() {
     });
 
 
-    function onFileChangeHandler(e) {
-        e.preventDefault();
-        this.setState({
-            selectedFile: e.target.files[0]
-        });
-
-    }
-
-
     return (
-        <div className="form-box"><label className="newpost">New Post</label>
-            <input
-                id="title"
-                name="title"
-                type="text"
-                onChange={formik.handleChange}
-                value={formik.values.title}
-                placeholder="Enter title..."
-                className="form-control"
-            />
-            <input
-                id="text"
-                name="text"
-                type="text"
-                onChange={formik.handleChange}
-                value={formik.values.text}
-                placeholder="Enter post text..."
-                className="form-control"
-                style={{width: "40%", height: "150px"}}
-            />
-            <input
-                id="password"
-                name="password"
-                type="password"
-                onChange={formik.handleChange}
-                value={formik.values.password}
-                placeholder="Enter password..."
-                className="form-control"
-            />
-            <input type="file" className="form-control" name="file" onChange={onFileChangeHandler}/>
-            <input className="submit-button" type="submit" value="Submit"/>
+        <div>
+            <form onSubmit={formik.handleSubmit} style={{width: '50%', display: 'inline-block'}}>
+                <label>Title</label>
+                <input
+                    id="title"
+                    name="title"
+                    type="text"
+                    onChange={formik.handleChange}
+                    value={formik.values.title}
+                    placeholder="Enter title..."
+                    className="form-control"
+                />
+                <label>Text</label>
+                <input
+                    id="text"
+                    name="text"
+                    type="text"
+                    onChange={formik.handleChange}
+                    value={formik.values.text}
+                    placeholder="Enter post text..."
+                    className="form-control"
+                    style={{width: "500px", height: "300px"}}
+                />
+                <label>Password</label>
+                <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    onChange={formik.handleChange}
+                    value={formik.values.password}
+                    className="form-control"
+                />
+                <label>Upload image</label>
+                <input id="image" name="image" type="file" onChange={(event) => {
+                    setImage(event.target.files[0])
+                }}/>
+                <input type="submit" value="Submit"/>
+            </form>
         </div>
     )
 

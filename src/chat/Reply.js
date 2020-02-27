@@ -14,7 +14,7 @@ function Reply(props) {
                             <b>{props.item.created}</b>
                         </div>
                         <br/>
-                        <p className="post-content">{props.item.text} Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                        <p className="post-content">{props.item.text}</p>
                     </div>
             </div>
         </div>
