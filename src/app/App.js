@@ -17,7 +17,7 @@ function App() {
                     <SideNavbar/>
                     <div className="col-md-9">
                         <Switch>
-                            <Route exact path="/" component={Demoteksti}/>
+                            <Route exact path="/" component={Home}/>
                             <Route path="/b" >
                                 <Topic id="1"/>
                             </Route>
@@ -55,9 +55,9 @@ function App() {
     );
 }
 
-const Demoteksti = () => (
+const Home = () => (
     <div>
-        <header className="page-name">Welcome to Joku Lauta!</header>
+        <header className="page-name">Welcome to Academy-chan!</header>
     <div className="home-page">
         <h1 className="table-header">Topics:</h1>
         <table className="topic-table">
