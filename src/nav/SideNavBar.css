@@ -29,15 +29,8 @@
     border-bottom-style: inset;
     border-bottom-color: #2e272e;
     margin-bottom: 15px;
-/*    display: inline-block;
-    block-size: available;
-    align-items: center!important;*/
 }
-/*.navbar-brand::after {
-    box-sizing: border-box;
-    border-bottom-color: white;
 
-}*/
 .home {
     margin-bottom: 15px;
 }
