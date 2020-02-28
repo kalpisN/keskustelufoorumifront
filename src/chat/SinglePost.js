@@ -36,7 +36,6 @@ export default class SinglePost extends Component{
                                     <a href={this.state.data.imgUrl}>{this.state.data.imgUrl} </a>
                                     <a>Anonymous, Title: </a>
                                     <b>{this.state.data.title} {this.state.data.created}</b>
-                                    <a>reply</a>
                                 </div>
                                 <br/>
                                 <p className="post-content">{this.state.data.text}</p>
@@ -58,7 +57,6 @@ export default class SinglePost extends Component{
                                 <a href={this.state.data.imgUrl}>{this.state.data.imgUrl} </a>
                                 <a>Anonymous, Title: </a>
                                 <b>{this.state.data.title} {this.state.data.created}</b>
-                                <a>reply</a>
                             </div>
                             <br/>
                             <p className="post-content">{this.state.data.text}</p>
