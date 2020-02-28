@@ -24,7 +24,7 @@ function Post(props) {
                         </div>
                     </div>
                 </div>
-                <b>No replies</b>
+                <b>No replies. <a href={replyurl}>Click </a> to reply</b>
             </div>
         )
     }
@@ -47,7 +47,7 @@ function Post(props) {
                     </div>
                 </div>
                 <p></p>
-                    <Reply key={replies[0].id} item={replies[0]}/>
+                    <Reply key={replies[replies.length-1].id} item={replies[replies.length-1]}/>
                     <b><a href={replyurl}>Click </a>to view all {replies.length} replies...</b>
             </div>
         )
@@ -73,7 +73,7 @@ function Post(props) {
             {replies.map(item => (
                 <Reply key={item.id} item={item}/>
             ))}
-            <b>No replies</b>
+            <b>No replies. <a href={replyurl}>Click </a> to reply</b>
         </div>
 
     )

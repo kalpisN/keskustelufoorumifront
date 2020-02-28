@@ -5,8 +5,8 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 export default function LoadingIndicator() {
 
     return (
-        <Loader type="Puff"
-                color="#00BFFF"
+        <Loader type="ThreeDots"
+                color="#6087c4"
                 height={100}
                 width={100}
         />
