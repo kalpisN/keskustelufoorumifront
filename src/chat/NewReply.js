@@ -61,10 +61,10 @@ export default function NewReply(props) {
                     value={formik.values.password}
                     className="form-control"
                 />
-                <label>Upload image</label>
+                <label>Upload image</label><br/>
                 <input id="image" name="image" type="file" className="image-input" onChange={(event) => {
                     setImage(event.target.files[0])
-                }}/>
+                }}/><br/>
                 <input className="submit-button" type="submit" value="Submit"/>
             </form>
         </div>
